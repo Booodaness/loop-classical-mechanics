@@ -233,13 +233,13 @@ Therefore, \emph{each non-contractible homotopy class in $\pi_n(X)$ represents a
 
 \begin{block}{Holonomies (\emph{States are loop-like, \emph{not} point-like!!!})}
 
-Let $\mu$ be a \textbf{Borel measure} on $X$ i.e. any measure on its \emph{$\sigma$-algebra of Borel sets}, $\mf{B}$ (which is the smallest $\sigma$-algebra on X containing its \emph{open sets}. Let $A$ be, for brevity, a scalar field $X \to \mb{R}$ representing a \textbf{physical observable} with $X$ being the \emph{configuration space} and $\mb{R}$ being the \emph{state space}. Then, the \textbf{holonomy} corresponding to $A$ along an $n$-loop $\gamma \in \mc{L}_n(X)$ is given by the $\mb{Z}$-linear functional,
+Let $\mu$ be a \textbf{Borel measure} on $X$ i.e. any measure on its \emph{$\sigma$-algebra of Borel sets}, $\mf{B}$ (which is the smallest $\sigma$-algebra on X containing its \emph{open sets}). Let $A$ be, for brevity, a scalar field $X \to \mb{R}$ representing a \textbf{physical observable} with $X$ being the \emph{configuration space} and $\mb{R}$ being the \emph{state space}. Then, the \textbf{holonomy} corresponding to $A$ along an $n$-loop $\gamma \in \mc{L}_n(X)$ is given by the $\mb{Z}$-linear functional,
 
-$$W_A[\gamma] = \bigointsss_{x \in \gamma} d \mu \: A(x)$$
+$$W_A[\gamma] = \bigointsss_{x \in \gamma(\Delta^n)} d \mu \: A(x)$$
 
 Now, by the Fundamental Theorem of Calculus, the state space $\mc{S}(X)$ corresponding to $p \in X$ is the set of holonomies for all loops based at $p$,
 
-$$\mc{S}(X) = \bigcup_{n = 0}^{\infty} \: \bigcup_{\gamma \in \mc{L}_n(X)} W_A[\gamma]$$
+$$\mc{S}(X) = \bigcup_{n = 0}^{\infty} \: \bigcup_{\gamma \in \mc{L}_n(X)} \{ W_A[\gamma] \}$$
 
 As a result, \textbf{if we forget paths which do not update $A$, the state space is identical to the modded loop space!} This is an unexpected physical consequence of the first isomorphism theorem:
 
@@ -247,7 +247,7 @@ As a result, \textbf{if we forget paths which do not update $A$, the state space
 $$\mc{S}(X) \cong_{\text{Set}} \mc{L}(X)/{\ker(W_A)}$$
 \end{highlight}
 
-$A$ is said to be \textbf{holonomic} if its holonomy is \emph{trivial} i.e. $\ker(W_A) = \mc{L}(X)$. Then, $\mc{S}(X)$ is the singleton $\{ A(p) \}$, allowing us to use the usual functional treatment to manipulate states. However, in general, $A$ is otherwise i.e. \textbf{non-holonomic}, and the best we can treat states is as sections of the bundle $(S(X), \varphi \circ \pi_{\{ p \}}, \{ p \})$ which is bundle-isomorphic to $\mc{L}(X), \pi_{\{ p \}}, \{ p \})$ where $\varphi : \mc{S}(X) \to \mc{L}(X)$.
+$A$ is said to be \textbf{holonomic} if its holonomy is \emph{trivial} i.e. $\ker(W_A) = \mc{L}(X)$. Then, $\mc{S}(X)$ is the singleton $\{ A(p) \}$, allowing us to use the usual functional treatment to manipulate states. However, in general, $A$ is otherwise i.e. \textbf{non-holonomic}, and the best we can treat states is as sections of the bundle $(S(X), \varphi \circ \pi_{\{ p \}}, \{ p \})$ which is bundle-isomorphic to $(\mc{L}(X), \pi_{\{ p \}}, \{ p \})$ where $\varphi : \mc{S}(X) \to \mc{L}(X)$.
 
 \end{block}
 
